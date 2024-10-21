@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send('Hello, Docker!');
 });
 
+app.get('/test', (req, res) => {
+  res.send('Hello!');
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
