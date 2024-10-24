@@ -14,8 +14,7 @@ RUN npm install
 COPY . .
 
 RUN mkdir /budgeticu-backend
-WORKDIR /budgeticu-backend
-COPY package*.json /budgeticu-backend/
+
 
 
 RUN mkdir /sharma /logs /dhheraj
