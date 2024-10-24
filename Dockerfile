@@ -13,6 +13,14 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
+RUN mkdir /budgeticu-backend
+WORKDIR /budgeticu-backend
+COPY package*.json /budgeticu-backend/
+
+
+RUN mkdir /sharma /logs /dhheraj
+
+
 # Expose the port the app runs on
 EXPOSE 3000
 
