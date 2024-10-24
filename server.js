@@ -1,10 +1,11 @@
-// server.js
 import express from 'express';
 import { exec } from 'child_process';
 
-
 const app = express();
 const port = 3000;
+
+// Middleware to parse JSON bodies
+app.use(express.json());
 
 // Simple route
 app.get('/', (req, res) => {
