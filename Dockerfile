@@ -10,15 +10,14 @@ COPY package*.json ./
 # Install the dependencies
 RUN npm install
 
+# Install sudo and nmap
+RUN apt-get update && apt-get install -y sudo nmap
+
 # Copy the rest of the application code to the container
 COPY . .
 
-RUN mkdir /budgeticu-backend
-
-
-
-RUN mkdir /sharma /logs /dhheraj
-
+# Create necessary directories
+RUN mkdir /budgeticu-backend /sharma /logs /dhheraj
 
 # Expose the port the app runs on
 EXPOSE 3000
