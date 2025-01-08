@@ -23,4 +23,4 @@ RUN mkdir /budgeticu-backend /sharma /logs /dhheraj
 EXPOSE 3000
 
 # Command to run the application
-CMD ["false"]
+CMD [""node", "server.js""]
